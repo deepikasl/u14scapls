@@ -1,5 +1,5 @@
 FROM drydock/u14javpls:prod
 
-ADD . /tmp
+ADD . /u14scapls
 
-RUN /tmp/install.sh && rm -rf /tmp
+RUN /u14scapls/install.sh && rm -rf /u14scapls
