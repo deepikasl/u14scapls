@@ -6,11 +6,11 @@ python:
 build:
   pre_ci:
     # Always pull the latest base image to avoid any cached images on the host
-    - docker pull drydock/u14javpls:prod
-    - docker build --rm -t drydock/u14scapls:tip .
+    - docker pull ankul/u14javpls:tip
+    - docker build --rm -t ankul/u14scapls:tip .
 
   pre_ci_boot:
-    image_name: drydock/u14scapls
+    image_name: ankul/u14scapls
     image_tag: tip
     pull: false
 
@@ -20,7 +20,7 @@ build:
     - java -version
 
   on_success:
-    - if [ "$IS_PULL_REQUEST" != true ]; then docker push drydock/u14scapls:tip; fi
+    - if [ "$IS_PULL_REQUEST" != true ]; then docker push ankul/u14scapls:tip; fi
 
 integrations:
   hub:
