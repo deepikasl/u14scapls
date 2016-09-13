@@ -1,4 +1,4 @@
-FROM drydock/u14javpls:prod
+FROM ankul/u14javpls:tip
 
 ADD . /u14scapls
 
